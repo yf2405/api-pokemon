@@ -1,0 +1,54 @@
+.app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.buttons-container{
+    
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+.card-container{
+  
+   display: flex;
+   width: 500px;
+   height: 300px;
+   margin-top: 80px;
+   position: relative;
+
+   & .card:nth-child(1){
+   
+    position: absolute;
+    left: 0;
+    z-index: 3;
+    transition: 100ms;
+    transform: rotate(-5deg) translateY(10px);
+    &:hover{
+        transform: rotate(-5deg) translateY(0) ;
+    }
+   }
+   & .card:nth-child(2){
+   
+    position: absolute;
+    left: 150px;
+    z-index: 2;
+    transition: 100ms;
+    &:hover{
+        transform: translateY(-10px);
+    }
+   }
+   & .card:nth-child(3){
+    
+    position: absolute;
+    left: 300px;
+    z-index: 1;
+    transition: 100ms;
+    transform: rotate(5deg) translateY(10px);
+    &:hover{
+        transform: rotate(5deg) translateY(0) ;
+    }
+   }
+}
